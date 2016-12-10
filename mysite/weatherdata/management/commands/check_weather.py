@@ -1,5 +1,5 @@
 from django.core.management.base import BaseCommand, CommandError
-#from from models 
+from weatherdata.models import Post, Weather 
 import httplib
 
 class Command(BaseCommand):
