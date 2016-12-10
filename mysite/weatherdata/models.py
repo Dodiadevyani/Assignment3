@@ -26,7 +26,7 @@ class Post(models.Model):
         return self.title
 
 class WeatherLog(models.Model):
-    location = models.ForeignKey(Location, verbose_name=("location"))
+    location = models.ForeignKey(Post, verbose_name=("location"))
     timestamp = models.DateTimeField("timestamp")
     mean_temperature = models.IntegerField("temperature (C°)")
     rainfall = models.IntegerField("rainfall (mm)")
@@ -35,7 +35,7 @@ class WeatherLog(models.Model):
     sunshine = models.IntegerField("sunshine (hrs)")
     
     class Meta:
-        verbose_name=_("weather log")
+        verbose_name=("weather log")
         verbose_name_plural=("weather logs")
         ordering = ("-timestamp",)
     
