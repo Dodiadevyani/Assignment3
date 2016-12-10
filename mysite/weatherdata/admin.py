@@ -1,6 +1,6 @@
 from django.contrib import admin
 from .models import Post
-#from .models import WeatherLog
+from .models import Weather
 
 admin.site.register(Post)
-#admin.site.register(WeatherLog)
+admin.site.register(Weather)
