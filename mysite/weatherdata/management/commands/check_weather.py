@@ -43,3 +43,8 @@ class Command(BaseCommand):
 	            #print r1.status, r1.reason
          	    rainfall = r1.read()
          	    connection.close()
+		    max_temperature=max_temp
+                    min_temperature=min_temp
+                    mean_temperature=mean_temp
+                    rainfall=rain_fall
+                    sunshine=sunshine_hrs
