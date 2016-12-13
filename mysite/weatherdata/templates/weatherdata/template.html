@@ -1,0 +1,16 @@
+<table>
+<tr>
+  <th>author</th>
+  <th>title</th>
+  <th>created_date</th>
+  <th>weather_parameter</th>
+</tr>
+{% for b in obj %}
+<tr>
+  <td>{{ b.author }}</td>
+  <td>{{ b.title }}</td>
+  <td>{{ b.created_date }}</td>
+  <td>{{ b.weather_parameter }}</td>
+</tr>
+{% endfor %}
+</table>
