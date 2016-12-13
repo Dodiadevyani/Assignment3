@@ -48,3 +48,4 @@ class Command(BaseCommand):
                     mean_temperature=mean_temp
                     rainfall=rain_fall
                     sunshine=sunshine_hrs
+		    print Post.objects.filter(location= l)
