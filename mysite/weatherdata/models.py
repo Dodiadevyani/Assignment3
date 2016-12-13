@@ -25,14 +25,13 @@ class Post(models.Model):
     def __str__(self):
         return self.title
 
-class WeatherLog(models.Model):
-    location = models.ForeignKey(Post, verbose_name=("location"))
-    timestamp = models.DateTimeField("timestamp")
-    mean_temperature = models.IntegerField("temperature (C°)")
-    rainfall = models.IntegerField("rainfall (mm)")
-    min_temperature = models.IntegerField("temperature (C°)")
-    max_temperature = models.IntegerField("temperature (C°)")
-    sunshine = models.IntegerField("sunshine (hrs)")
+class Weather(models.Model):
+    location = models.ForeignKey(Post, verbose_name=("location")
+    mean_temperature = models.IntegerField()
+    rainfall = models.IntegerField()
+    min_temperature = models.IntegerField()
+    max_temperature = models.IntegerField()
+    sunshine = models.IntegerField()
     
     class Meta:
         verbose_name=("weather log")
