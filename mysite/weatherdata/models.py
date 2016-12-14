@@ -26,7 +26,7 @@ class Post(models.Model):
         return self.title
 
 class Weather(models.Model):
-    location = models.ForeignKey(Post, verbose_name=("location")
+    location = models.ForeignKey(Post, verbose_name=("location"))
     mean_temperature = models.IntegerField()
     rainfall = models.IntegerField()
     min_temperature = models.IntegerField()
