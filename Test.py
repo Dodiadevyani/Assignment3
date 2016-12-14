@@ -18,4 +18,9 @@ for l in locations:
 		weather_file.write(weather_data)
 		weather_file.close()
 		connection.close()
-
+        q = Post.objects.filter(location = l)
+	#print q
+	with open ('Rainfall_Wales.txt','r') as f:
+		for line in f:
+			sections=line.split('|')
+			Weather.objects.create(rainfall = sections)
