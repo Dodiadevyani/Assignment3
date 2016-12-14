@@ -27,7 +27,7 @@ class Post(models.Model):
 
 class Weather(models.Model):
     location = models.ForeignKey(Post, verbose_name=("location"))
-    date = models.DateTimeField(_("timestamp"))
+    date = models.DateTimeField(("timestamp"))
     Tmean = models.FloatField()
     Rainfall = models.FloatField()
     Tmin = models.FloatField()
