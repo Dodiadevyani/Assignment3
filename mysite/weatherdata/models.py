@@ -27,16 +27,15 @@ class Post(models.Model):
 
 class Weather(models.Model):
     location = models.ForeignKey(Post, verbose_name=("location"))
-    mean_temperature = models.IntegerField()
-    rainfall = models.IntegerField()
-    min_temperature = models.IntegerField()
-    max_temperature = models.IntegerField()
-    sunshine = models.IntegerField()
+    mean_temperature = models.FloatField()
+    rainfall = models.FloatField()
+    min_temperature = models.FloatField()
+    max_temperature = models.FloatField()
+    sunshine = models.FloatField()
     
     class Meta:
         verbose_name=("weather log")
         verbose_name_plural=("weather logs")
-        ordering = ("-timestamp",)
     
     def __unicode__(self):
         return "%s @ %s" % (
