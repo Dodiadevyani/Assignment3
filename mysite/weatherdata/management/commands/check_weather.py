@@ -26,9 +26,10 @@ class Command(BaseCommand):
 		        #weather_file.close()
          	        connection.close()
                         print p 
-		    q= Post.objects.filter(location= l)
-         	    print q
-         	    with open ('Rainfall_Wales.txt','r') as f:
+		        q= Post.objects.filter(location= l)
+         	        print q
+         	        with open (' p+"_"+l+".txt"','r') as f:
                             for line in f:
                                     sections=line.split('|')
-                                    Weather.objects.create(rainfall= sections)
+                                    data= Weather.objects.create(p = sections)
+                                    data.save()
