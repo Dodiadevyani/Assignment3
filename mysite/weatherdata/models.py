@@ -27,11 +27,11 @@ class Post(models.Model):
 
 class Weather(models.Model):
     location = models.ForeignKey(Post, verbose_name=("location"))
-    mean_temperature = models.FloatField()
-    rainfall = models.FloatField()
-    min_temperature = models.FloatField()
-    max_temperature = models.FloatField()
-    sunshine = models.FloatField()
+    Tmean = models.FloatField()
+    Rainfall = models.FloatField()
+    Tmin = models.FloatField()
+    Tmax = models.FloatField()
+    Sunshine = models.FloatField()
     
     class Meta:
         verbose_name=("weather log")
